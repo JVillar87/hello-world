@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
+import type React from "react";
 
 export const metadata: Metadata = {
-    title: "Hello World",
+    title: {
+        default: "Next.js Tutorial - Codevolution",
+        template: "%s | Codevolution",
+
+    },
     description: "My Next.js application",
 };
 
-export default function AuthLayout({
+export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
