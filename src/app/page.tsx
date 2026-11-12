@@ -5,7 +5,10 @@ export default function Home() {
     <>
         <h1>Welcome Home!</h1>
         <Link href="/blog">Blog</Link><br></br>
-        <Link href="/products">Products</Link>
+        <Link href="/products">Products</Link><br></br>
+        <Link href="/articles/breaking-news-123?lang=en">Read in English</Link><br></br>
+            <Link href="/articles/breaking-news-123?lang=es">Leer en Español</Link><br></br>
+            <Link href="/articles/breaking-news-123?lang=fr">Read in French</Link>
     </>
     );
 }
