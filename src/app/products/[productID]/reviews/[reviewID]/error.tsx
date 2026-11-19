@@ -1,28 +1,17 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { startTransition } from "react";
-
+import ErrorWrapper from "@/src/app/error-wrapper";
 
 export default function ErrorBoundary({
     error,
     reset
 }: {
-    error: Error;
+    error: Error & { digest?: string };
     reset: () => void;
 }) {
-    const router = useRouter();
-    const reload = () => {
-        startTransition(() => {
-            router.refresh();
-            reset();
-        });
-    };
-
-    return (
-        <div>
-            <div>{error.message}</div>
-            <button onClick={() => reload()}>Try again</button>
-        </div>
-    );
+    return <ErrorWrapper
+        error={error}
+        reset={reset}
+        message="Something went wrong while loading this review."
+    />;
 }
