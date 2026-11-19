@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type React from "react";
 
+
 export const metadata: Metadata = {
     title: {
         default: "Next.js Tutorial - Codevolution",
@@ -26,6 +27,7 @@ export default function RootLayout({
                 >
                     Header
                 </header>
+                
                 {children}
                 <footer
                     style={{
